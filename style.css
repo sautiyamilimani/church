@@ -1,0 +1,157 @@
+*{
+    padding:0px;
+    margin:0px;
+    
+    
+}
+
+body{
+    display:flex;
+    justify-content: center;
+}
+
+.content{
+    margin-top:2px;
+    margin:auto;
+
+    font-size:2rem;
+    width:95%;
+    border: 10px solid rgba(0,0,0);
+    
+    background: ;
+
+
+}
+
+a{
+    text-decoration: none;
+}
+
+a:clicked{
+    color:blue;
+}
+
+a:hover{
+    color:purple;
+}
+
+a:active{
+    color:green;
+}
+
+.content div{
+    margin:40px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.content .header{
+    text-align: center;
+    width: 90%;
+    text-decoration: bold;
+
+    
+}
+
+.title{
+    color:green;
+    font-size:4rem;
+    
+    
+}
+
+.user{
+    background: #0002;
+    margin: auto;
+    width:90%;
+    min-height: 60%;
+
+    
+
+}
+
+.user .member{
+    height: 100px;
+    text-align:center;
+    margin:auto;
+    border:solid black 2px;
+    border-radius:10px;
+    background: #0003;
+    margin-bottom: 40px;
+    margin-top:40px;
+    font-weight:bold;
+    font-size: ;
+    font-family: arial;
+    box-shadow: 1px 2px 4px 2px #0009;
+    
+    
+}
+
+.user .member a{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+}
+
+.user .member a .image img{
+    margin:auto;
+    height:90px;
+    width:90px;
+    border-radius:50%;
+    float:left;
+    margin-right:5px;
+    
+}
+
+.user .management{
+    height: 100px;
+    text-align:center;
+    margin:auto;
+    border:solid black 2px;
+    border-radius:10px;
+    background: #0003;
+    margin-bottom: 40px;
+    margin-top:40px;
+    font-weight:bold;
+    font-size: ;
+    font-family: arial;
+    box-shadow: 1px 2px 4px 2px #0009;
+    
+    
+}
+
+.user .management a{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+}
+
+.user .management a .image img{
+    margin:auto;
+    height:90px;
+    width:90px;
+    border-radius:50%;
+    float:left;
+    margin-right:5px;
+    
+}
+
+.content .user .about{
+    border:solid black 2px;
+    background: #0002;
+    margin: auto;
+    box-shadow: 1px 2px 4px 2px #0009;
+    text-align:left;
+    
+    
+    
+}
+
+.footer{
+    text-align: center;
+}
