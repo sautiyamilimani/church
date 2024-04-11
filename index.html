@@ -1,27 +1,186 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>Sauti ya mlimani</title>
-        <link rel="stylesheet" href="style.css">
-        
+        <style>
+            *{
+    padding:0px;
+    margin:0px;
+    
+    
+}
+
+body{
+    display:flex;
+    justify-content: center;
+}
+
+.content{
+    margin-top:2px;
+    margin:auto;
+
+    font-size:2rem;
+    width:95%;
+    border: 10px solid rgba(0,250,200,.5);
+    
+    /*background: ;
+*/
+
+}
+
+a{
+    text-decoration: none;
+}
+
+a:clicked{
+    color:blue;
+}
+
+a:hover{
+    color:purple;
+}
+
+a:active{
+    color:green;
+}
+
+.content div{
+    margin:40px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.content .header{
+    text-align: center;
+    width: 90%;
+    text-decoration: bold;
+
+    
+}
+
+.title{
+    color:green;
+    font-size:4rem;
+    
+    
+}
+
+.user{
+    background: #0002;
+    margin: auto;
+    width:90%;
+    min-height: 60%;
+
+    
+
+}
+
+.user .member{
+    height: 100px;
+    text-align:center;
+    margin:auto;
+    border:solid black 2px;
+    border-radius:10px;
+    background:rgba(0,250,200,.5);
+   
+    margin-bottom: 40px;
+    margin-top:40px;
+    font-weight:bold;
+    font-size:1em ;
+    font-family: arial;
+    box-shadow: 1px 2px 4px 2px #0009;
+    
+    
+}
+
+.user .member a{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+}
+
+.user .member a .image img{
+    margin:auto;
+    height:90px;
+    width:90px;
+    border-radius:50%;
+    float:left;
+    margin-right:5px;
+    
+}
+
+.user .management{
+    height: 100px;
+    text-align:center;
+    margin:auto;
+    border:solid black 2px;
+    border-radius:10px;
+    background:rgba(0,250,200,.5);
+    margin-bottom: 40px;
+    margin-top:40px;
+    font-weight:bold;
+    font-size: 1em;
+    font-family: arial;
+    box-shadow: 1px 2px 4px 2px #0009;
+    
+    
+}
+
+.user .management a{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+}
+
+.user .management a .image img{
+    margin:auto;
+    height:90px;
+    width:90px;
+    border-radius:50%;
+    float:left;
+    margin-right:5px;
+    
+}
+
+.content .user .about{
+    border:solid black 2px;
+    background: #fff;
+    margin: auto;
+    box-shadow: 1px 2px 4px 2px #0009;
+    text-align:left;
+    
+    
+    
+}
+
+.footer{
+    text-align: center;
+    font-size:1rem;
+}
+        </style>
     </head>
     <body>
         <div class="content">
             <div class="header">
                 <p class="title">SAUTI YA MLIMANI YOUTHS</p>
-                <img src="youths.jpeg" alt="">
+                <img src="images/youths.jpeg" alt="">
                 
             </div>
             
             <div class="user">
                 
                 <h2>LOGIN</h2>
-                <SCRIPT>alert("THIS WEBSITE IS STILL UNDER DEVELOPMENT.\n SOON IT WILL BE COMPLETE \n CONTACT THE DEVELOPERS TO SUGGEST A FEATURE TO BE ADDED TO THIS SITE.")</SCRIPT>
+                
                 <div class="member">
-                    <a href="http://sautiyamlimaniyouth.great-site.net/church/members/index.php">
+                    <a href="members/index.php">
                         <p class="image">
-                           <img src="member.jpeg" alt="image error">
+                           <img src="images/member.jpeg" alt="image error">
                         </p>
                     
                         <p class="text">
@@ -31,9 +190,9 @@
                 </div>
                 
                 <div class="management">
-                   <a href="http://sautiyamlimaniyouth.great-site.net/church/leaders/login.php">
+                   <a href="leaders/login.php">
                        <p class="image">
-                          <img src="leaders.png" alt="image error">
+                          <img src="images/leaders.png" alt="image error">
                        </p>
                         <p class="text">
                             EXECUTIVE
@@ -64,7 +223,7 @@
             
             </div>
             <div class="footer">
-                <img src="code.png" alt="">
+                <img src="images/code.png" alt="">
                 <p>DEVELOPED BY</p>
                 <p>SAUTI YA MLIMANI TECHNICIANS</p>
             </div>
