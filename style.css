@@ -59,6 +59,10 @@ a:active{
     min-height: 60%;
 }
 
+.text{
+    font-size:1rem;
+}
+
 .user .member{
     height: 100px;
     text-align:center;
