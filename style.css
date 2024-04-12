@@ -1,8 +1,6 @@
 *{
     padding:0px;
-    margin:0px;
-    
-    
+    margin:0px;    
 }
 
 body{
@@ -46,15 +44,12 @@ a:active{
 .content .header{
     text-align: center;
     width: 90%;
-    text-decoration: bold;
-    color:rgba(0,250,200,.5);
+    text-decoration: bold;    
 }
 
 .title{
     color:green;
-    font-size:4rem;
-    
-    
+    font-size:4rem;   
 }
 
 .user{
@@ -62,9 +57,6 @@ a:active{
     margin: auto;
     width:90%;
     min-height: 60%;
-
-    
-
 }
 
 .user .member{
@@ -79,16 +71,13 @@ a:active{
     font-weight:bold;
     font-size:1em ;
     font-family: arial;
-    box-shadow: 1px 2px 4px 2px #0009;
-    
-    
+    box-shadow: 1px 2px 4px 2px #0009;    
 }
 
 .user .member a{
     display: flex;
     align-items: center;
-    justify-content:center;
-    
+    justify-content:center;    
 }
 
 .user .member a .image img{
@@ -97,8 +86,7 @@ a:active{
     width:90px;
     border-radius:50%;
     float:left;
-    margin-right:5px;
-    
+    margin-right:5px;  
 }
 
 .user .management{
@@ -113,16 +101,13 @@ a:active{
     font-weight:bold;
     font-size: 1em;
     font-family: arial;
-    box-shadow: 1px 2px 4px 2px #0009;
-    
-    
+    box-shadow: 1px 2px 4px 2px #0009;   
 }
 
 .user .management a{
     display: flex;
     align-items: center;
-    justify-content:center;
-    
+    justify-content:center;   
 }
 
 .user .management a .image img{
@@ -131,8 +116,7 @@ a:active{
     width:90px;
     border-radius:50%;
     float:left;
-    margin-right:5px;
-    
+    margin-right:5px;  
 }
 
 .content .user .about{
@@ -141,13 +125,14 @@ a:active{
     margin: auto;
     box-shadow: 1px 2px 4px 2px #0009;
     text-align:left;
-    font-family:arial;
-    
-    
-    
+    font-family:arial;   
+}
+h2{
+    color:rgba(0,250,200,.5);
 }
 
 .footer{
     text-align: center;
     font-size:.5rem;
 }
+
