@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sauti ya mlimani</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+
+        }
+        :root{
+            --background_clr:rgba(100,215,250,.5);
+
+        }
+        body{
+            background:var(--background_clr);
+            /* height:2000px; */
+            font-family:arial;
+
+            padding-bottom:20px;
+            
+        }
+
+
+        .header{
+            display:grid;
+            justify-content:center;
+            grid-template-columns:3fr 1fr;
+            position:sticky;
+            width:100vw;
+            top:0;
+            border-radius:15px;
+
+        }
+        .header h2{
+           
+            background:rgba(20,250,200);
+            height:2rem;
+            padding:1rem .5rem;
+            text-align:center;
+            font-size:1EM;
+            border:solid green 2px;
+        }
+        nav{
+        
+            background:rgba(100,215,250,.8);
+            padding:0 2rem;
+            z-index: 2;
+            text-align:right;
+            border:solid blue 2px;
+        }
+
+       
+
+        .img{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            height:2rem;
+            padding:1rem .5rem;
+        }
+        #menu_img{
+            width:2rem;
+            cursor:pointer;
+        }
+
+        nav ul{
+            padding:.1rem 0px;
+            display:none;
+        }
+
+        nav ul li{
+            text-align:left;
+            display:block;
+            margin:.3rem 1px;
+            padding:.2rem;
+            width:5rem;
+            background:rgba(100,215,250);
+            
+        }
+        nav ul li a{
+            text-decoration:none;
+        }
+        
+        nav ul li:active{
+            background:rgba(100,250,215);  
+        }
+
+          
+        nav ul li:focus{
+            background:rgba(100,250,215);  
+        }
+
+        li{
+            list-style-position:inside;
+        }
+
+        ul li{
+            list-style:none;
+        }
+
+        .top_drop_down{
+            height:20px;
+            display: inline;
+            float:right;
+
+            
+        }
+        .portals{
+            display: inline;
+        }
+       
+        .portals_div{
+            display: inline;
+           
+            color:white;
+            animation:move_left 2s linear;
+        }
+        .portals_div ol li{
+            background:red;
+            width: 100%;
+   
+        }
+        .main{
+            padding-top:5px;          
+            /* position:fixed; */
+            /* top: 3px; */
+            z-index: -1;
+            /* overflow-y:scroll; */
+        }
+
+        .main div{
+            padding:5px;
+            width: 90vw;
+            margin:auto;
+            background:rgba(160,255,160);
+            border:solid 2px var(--background_clr);
+            box-shadow:0 2px 4px 2px #0004;
+            border-radius:5px;
+            line-height:1.5rem;
+
+        }
+
+
+
+        h3{
+            text-align:center;
+            padding:5px;
+            color:blue:
+        }
+
+
+    
+        #footer{
+            
+            position: sticky;
+            bottom:0px;
+            background:#eee;
+            text-align:center;
+            
+        }
+       
+        hr{
+            height:2px;
+          background-color:green;
+        }
+
+        @keyframes move_left {
+            0%{
+                color:red;
+            }
+
+            25%{
+                color:white;
+            }
+            
+            50%{
+                color:red;
+            }
+            
+            75%{
+                color:white;
+            }
+
+            100%{
+                color:red;
+            }
+
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <h2>Welcome to Sauti ya Mlimani</h2>
+        <nav >   
+        <div class="img"> <img src="youth/images/menu.png" alt="" id='menu_img' onclick="toggle_menu()">
+     
+          </div> 
+          
+        <ul class="options">
+            <hr>
+                <li> 
+                    <img class='top_drop_down' src="youth/images/drop_down.jpg" alt="drop_down">Portals</img> 
+                    <div class="portals_div">
+                    <ol>
+                        <li>Elders</li>
+                        <li>Women</li>
+                        <li><a href="youth/">youth</a></li>
+                        <li>Sunday_school</li>
+                    </ol>
+                    </div>
+                  
+                
+                </li>
+                <hr>
+                <li><a href="#About Us">About Us</a></li>
+                <hr>
+                <li><a href="#services">Services</a></li>
+                <hr>
+                <li><a href="#Events">Events</a></li>
+                <hr>
+                <li><a href="#contact">Contacts</a></li>
+                <hr>
+                <li><a href="#projects">Projects</a></li>
+                 <hr>
+                <li><a href="#Give">Give</a></li>
+                <hr>
+                <li><a href="history.html">History</a></li>
+               
+            </ul>
+        </nav>
+
+        
+    </div>
+    <div class="main">
+
+        <div class="welcome">
+            <h3>
+                Welcome  
+            </h3>
+            <hr>
+            <p class="content">We are delighted that you visited our online platform.Welcome and enjoy surfing.</p>
+        </div>
+
+        <br>
+
+        <div id="services">
+            <h3>Our Services</h3>
+            <hr>
+           <p class="content">We normaly conduct the folllowing services :
+              <br>
+                <ul>
+                    <li>
+                        <p>
+                            <h4>Sunday services :</h4>
+                        
+                            <ol>
+                                <li>8.00 a.m - 9.00a.m : Sunday school.</li>
+                                <li><a href="sunday_school_srmn.html">watch sermons</a></li>
+                                <br>
+                                <li>9.20 a.m -10.20 a.m : Youth service.</li>
+                                <li><a href="youth_srmn.html">watch sermons</a></li>
+                                <br>
+                                <li>10.30 a.m -1.30 p.m : Main service.</li>
+                                <li><a href="main_srmn.html">watch sermons</a></li>
+                            </ol>
+                        </p>
+                    </li>
+                    <br>
+
+                    <li>
+                        <p>
+                            <h4>Tuesday fellowship</h4>
+                            <br>
+                            
+                           <span>
+                           Church women gather every tuesday from 2pm to 5pm for a fellowship. <br>
+                            This week's gathering will be at :[church].
+                           </span>
+                        </p>
+                    </li>
+                    
+                    <br>
+                    <li>
+                        <p>
+                            <h4> Thursday and Friday services</h4>
+                        <br>
+                        
+                        <span>
+                        Church members gather every Thursday and Friday from 2pm to 5pm for weekdays services.
+                        
+                        </span>
+                       </p>
+                       
+                    </li>
+                    <br>
+                    <li>
+                        <h4>Saturday</h4>
+                        <br>
+                        <span>
+                            Youth gather every Saturday from 8 p.m to 5 p.m for choir practice and general cleaning at the church.
+                        </span>
+                    </li>
+                </ul>
+           </p>
+        </div>
+        <br>
+        <div id="projects">
+            <h3>Projects</h3>
+            <hr>
+            The following projects are ongoing at the church :
+             <ol>
+                <li>New Church Building</li>
+                <br>
+                <p>A new and more spacious church building is being constructed.We noramly carry out several fundrising meetings on specific sundays to do this.The meetings are grouped into youth,men,women, the whole church.Each of theses groups are assigned specific sundays to head the fundrising meetings but the whole church is involved.Guests are always welcomed.</p>
+
+            </ol>
+            <br>
+            <p>You can <a href="">click here </a>to donate funds.</p>
+        </div>
+
+        <br>
+        <div id="contact">
+           
+                <h3>Contact us</h3>
+                <hr>
+                <p class="content">
+                    You can reach us through the following channels:
+                    <ol>
+                        <li>
+                            General
+                            <br>
+                            <ul>
+                                <li>Email: <a href="mailto:sauitiyamlimani@gmail.com">sauitiyamlimani@gmail.com</a></li>
+                                <li> whatsapp: <a href="https://wa.me://+254708612010">0708612010</a></li>
+                                <li>Call and inbox : 0708612010 .</li>
+                            </ul>
+                            
+                            
+                        </li>
+                        <br>
+                        <li>
+                            Youth
+                            <br>
+                            Email : <a href="mailto:sautiyamlimaniyouth@gmail.com">sautiyamlimaniyouth@gmail.com</a>
+                            <br>
+                            whatsapp: <a href="httw://wa.me://+254708612010">0708612010</a>
+                            <br>
+                            Call and inbox : 0708612010 .
+                        </li>
+
+
+
+                    </ol>
+                    
+
+                </p>
+        </div>
+        <br>
+        <div id="quick_links">
+            <P>
+                <h3>Quick links</h3>
+                <hr>
+                <a href="history.html">See church history</a>
+            </P>
+         </div>
+    </div>
+    <div id="footer">
+            <p>&copy Sauti ya Mlimani.All rights reserved.   </p>
+    </div>
+    
+</body>
+<script>
+        let menu=document.querySelector('.options');
+        let menu_img=document.querySelector('#menu_img');
+        
+
+            function toggle_menu(){
+                if(menu.style.display==='none'||menu.style.display===''){
+                    menu.style.display='block';
+                    menu_img.src="youth/images/close.png";
+
+                    console.log(menu.style.display);
+                }else if(menu.style.display==='block'){
+                    menu.style.display='none';
+                    menu_img.src="youth/images/menu.png";
+                    
+                }
+            }
+    </script>
+</html>
