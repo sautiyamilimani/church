@@ -8,6 +8,7 @@
         *{
             padding:0;
             margin:0;
+            box-sizing:border-box;
 
         }
         :root{
@@ -24,111 +25,127 @@
         }
 
 
-        .header{
-            display:grid;
-            justify-content:center;
-            grid-template-columns:3fr 1fr;
-            position:sticky;
-            width:100vw;
-            top:0;
-            border-radius:15px;
-
-        }
-        .header h2{
-           
-            background:rgba(20,250,200);
-            height:2rem;
-            padding:1rem .5rem;
-            text-align:center;
-            font-size:1EM;
-            border:solid green 2px;
-        }
         nav{
         
-            background:rgba(100,215,250,.8);
+            background:#f9f9f9;
             padding:0 2rem;
             z-index: 2;
             text-align:right;
             border:solid blue 2px;
-        }
-
-       
-
-        .img{
-            display: flex;
-            justify-content: center;
-            align-items:center;
-            height:2rem;
-            padding:1rem .5rem;
-        }
-        #menu_img{
-            width:2rem;
-            cursor:pointer;
+            width: 100%;
+            height:50px;
         }
 
         nav ul{
-            padding:.1rem 0px;
-            display:none;
+            display: flex;
+            justify-content:right;
+            align-items:center;
+            height:50px;
+            width:94%;
+            margin:auto;
         }
 
+        nav ul :first-child{
+            margin-right:auto;
+        }
         nav ul li{
-            text-align:left;
-            display:block;
-            margin:.3rem 1px;
-            padding:.2rem;
-            width:5rem;
-            background:rgba(100,215,250);
-            
+            display: flex;
+            align-items:center;
+            height:50;
+        }
+
+        nav ul li:hover{
+            background:#bbb;
+
         }
         nav ul li a{
-            text-decoration:none;
-        }
-        
-        nav ul li:active{
-            background:rgba(100,250,215);  
+            display: flex;
+            padding:5px;
+            align-items:center;
         }
 
-          
-        nav ul li:focus{
-            background:rgba(100,250,215);  
+        .logo span{
+           padding-left:10px; 
+        }
+
+        
+
+        .logo__img{
+            border-radius:50%;
+            height:30px;
+        }
+
+        #menu__img{
+            height:30px;
         }
 
         li{
-            list-style-position:inside;
-        }
-
-        ul li{
+            
             list-style:none;
         }
+        li a{
+            
+            text-decoration:none;
+            color:black;
+        }
 
-        .top_drop_down{
+
+
+         .top_drop_down{
             height:20px;
             display: inline;
             float:right;
 
             
         }
-        .portals{
-            display: inline;
+
+        .sidebar{
+            display:none;
+            width:50%;
+            position: fixed;
+            top:0;
+            right:0;
+            height:96vh;
+            padding-top: 10;
+            background:#fff2;
+            backdrop-filter:blur(100px);
+            box-shadow:-2px -2px 4px 2px #0005;
+            z-index: 999;
         }
-       
-        .portals_div{
-            display: inline;
-           
-            color:white;
-            animation:move_left 2s linear;
+        .sidebar ul{
+            display: flex;
+            flex-direction:column;
+            width:100%
         }
-        .portals_div ol li{
-            background:red;
-            width: 100%;
-   
+        .sidebar ul li{
+            width:100%;
+            margin:10px;
         }
+        .sidebar ul li a{
+            padding:10;
+            width:100%
+        }
+      
         .main{
             padding-top:5px;          
             /* position:fixed; */
             /* top: 3px; */
             z-index: -1;
             /* overflow-y:scroll; */
+        }
+
+        .animated{
+            opacity:0;
+            padding:5px;
+            width: 90vw;
+            margin:auto;
+            background:rgba(160,255,160);
+            border:solid 2px var(--background_clr);
+            box-shadow:0 2px 4px 2px #0004;
+            border-radius:5px;
+            line-height:1.5rem;
+            transition:all 1s ease;
+
         }
 
         .main div{
@@ -142,6 +159,21 @@
             line-height:1.5rem;
 
         }
+
+        
+.animated.appear{
+            opacity: 1;
+            padding:5px;
+            width: 90vw;
+            margin:.auto;
+            background:rgba(160,255,160);
+            border:solid 2px var(--background_clr);
+            box-shadow:0 2px 4px 2px #0004;
+            border-radius:5px;
+            line-height:1.5rem;
+
+        }
+
 
 
 
@@ -159,7 +191,7 @@
             bottom:0px;
             background:#eee;
             text-align:center;
-            
+            z-index: 1000;
         }
        
         hr{
@@ -190,55 +222,78 @@
 
             
         }
+
+        @media(max-width:800px){
+            .hide__on__mobile{
+                display:none;
+            }
+        }
+
+        @media(min-width:800px){
+            .menu__img{
+                display:none;
+            }
+        }
     </style>
 
+
 </head>
+
 <body>
-    <div class="header">
-        <h2>Welcome to Sauti ya Mlimani</h2>
+       
         <nav >   
-        <div class="img"> <img src="menu.png" alt="" id='menu_img' onclick="toggle_menu()">
-     
-          </div> 
+       
           
         <ul class="options">
-            <hr>
-                <li> 
-                    <img class='top_drop_down' src="youth/images/drop_down.jpg" alt="drop_down">Portals</img> 
-                    <div class="portals_div">
-                    <ol>
-                        <li>Elders</li>
-                        <li>Women</li>
-                        <li><a href="youth.html">youth</a></li>
-                        <li>Sunday_school</li>
-                    </ol>
-                    </div>
-                  
+                <li class="logo"><a href="#"><img class="logo__img"src="youth/images/youths.jpeg" alt="logo"><span>S.Y.M</span></a></li>            
+                <li class="hide__on__mobile"><a href="#About Us">About Us</a></li>
+            
+                <li class="hide__on__mobile"> <a href="#services">Services</a></li>
                 
-                </li>
-                <hr>
-                <li><a href="#About Us">About Us</a></li>
-                <hr>
-                <li><a href="#services">Services</a></li>
-                <hr>
-                <li><a href="#Events">Events</a></li>
-                <hr>
-                <li><a href="#contact">Contacts</a></li>
-                <hr>
-                <li><a href="#projects">Projects</a></li>
-                 <hr>
-                <li><a href="#Give">Give</a></li>
-                <hr>
-                <li><a href="history.html">History</a></li>
+                <li class="hide__on__mobile"><a href="#Events">Events</a></li>
+                
+                <li class="hide__on__mobile"><a href="#contact">Contacts</a></li>
+                
+                <li class="hide__on__mobile"><a href="#projects">Projects</a></li>
+                 
+                <li class="hide__on__mobile"><a href="#Give">Give</a></li>
+                
+                <li class="hide__on__mobile"><a href="history.html">History</a></li>
+                <li class="menu__img" onclick=showSideBar()> <img src="youth/images/menu.png" alt="" id='menu__img' > </li> 
+               
+
                
             </ul>
         </nav>
 
-        
-    </div>
+        <nav class="sidebar" >   
+       
+          
+            <ul class="options">  
+                
+            <li  onclick=hideSideBar() class="menu__img"> <img src="youth/images/close.png" alt="" id='menu__img'> </li>         
+                <li class="show__on__mobile"><a href="#About Us">About Us</a></li>
+            
+                <li class="show__on__mobile"> <a href="#services">Services</a></li>
+                
+                <li class="show__on__mobile"><a href="#Events">Events</a></li>
+                
+                <li class="show__on__mobile"><a href="#contact">Contacts</a></li>
+                
+                <li class="showe__on__mobile"><a href="#projects">Projects</a></li>
+                 
+                <li class="show__on__mobile"><a href="#Give">Give</a></li>
+                
+                <li class="show__on__mobile"><a href="history.html">History</a></li>
+               
+
+               
+            </ul>
+        </nav>
+
     <div class="main">
 
-        <div class="welcome">
+        <div class="welcome" class="not_animated">
             <h3>
                 Welcome  
             </h3>
@@ -248,7 +303,7 @@
 
         <br>
 
-        <div id="services">
+        <div id="services" class="animated">
             <h3>Our Services</h3>
             <hr>
            <p class="content">We normaly conduct the folllowing services :
@@ -309,7 +364,7 @@
            </p>
         </div>
         <br>
-        <div id="projects">
+        <div id="projects" class="animated">
             <h3>Projects</h3>
             <hr>
             The following projects are ongoing at the church :
@@ -324,7 +379,7 @@
         </div>
 
         <br>
-        <div id="contact">
+        <div id="contact" class="animated">
            
                 <h3>Contact us</h3>
                 <hr>
@@ -361,7 +416,7 @@
                 </p>
         </div>
         <br>
-        <div id="quick_links">
+        <div id="quick_links" class="not_animated">
             <P>
                 <h3>Quick links</h3>
                 <hr>
@@ -369,27 +424,42 @@
             </P>
          </div>
     </div>
-    <div id="footer">
+    <div id="footer" class="">
             <p>&copy Sauti ya Mlimani.All rights reserved.   </p>
     </div>
     
 </body>
 <script>
-        let menu=document.querySelector('.options');
-        let menu_img=document.querySelector('#menu_img');
+        const sidebar=document.querySelector(".sidebar");
+
+        function showSideBar(){
+            sidebar.style.display='block';
+        }
+
+        function hideSideBar(){
+            sidebar.style.display='none';
+        }
         
 
-            function toggle_menu(){
-                if(menu.style.display==='none'||menu.style.display===''){
-                    menu.style.display='block';
-                    menu_img.src="close.png";
 
-                    console.log(menu.style.display);
-                }else if(menu.style.display==='block'){
-                    menu.style.display='none';
-                    menu_img.src="menu.png";
-                    
+            function onscroll(){
+               const elements=document.querySelectorAll(".animated");
+
+                elements.forEach(element=>{
+                   const above_space=element.getBoundingClientRect().top;
+                   const win_height=window.innerHeight;
+
+                   if(above_space < win_height-(win_height/4)){
+                    element.classList.add('appear');
+                   }else{
+                    element.classList.remove('appear');
+                   }
                 }
+                )
             }
+
+            window.addEventListener('scroll',onscroll);
+            onscroll();
+
     </script>
 </html>
