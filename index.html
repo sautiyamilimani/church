@@ -5,29 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sauti ya mlimani</title>
     <style>
-      *{
+        /*RESETS */
+        *{
             padding:0;
             margin:0;
             box-sizing:border-box;
             font-family:'arial' ,sans-serif;
-          
 
         }
+
+         
+        hr{
+            height:2px;
+          background-color:green;
+        }
+
+        
+        h3{
+            text-align:center;
+            padding:5px;
+            color:blue:
+        }
+
+        /*BASE STYLES*/
+
         :root{
             --background_clr:rgba(100,215,250,.5);
+           
 
         }
         body{
-            background:var(--background_clr);
-            /* height:2000px; */
+            background:var(--background_clr); 
             font-family:arial;
-
-            padding-bottom:20px;
-            
+            padding-bottom:20px;   
         }
 
+        .main{
+            padding-top:5px;          
+            /* position:fixed; */
+            /* top: 3px; */
+            z-index: -1;
+            /* overflow-y:scroll; */
+        }
 
-        nav{ 
+       
+        .animated{
+            opacity:0;
+            padding:5px;
+            width: 90vw;
+            margin:auto;
+            background:rgba(160,255,160);
+            border:solid 2px var(--background_clr);
+            box-shadow:0 2px 4px 2px #0004;
+            border-radius:5px;
+            line-height:1.5rem;
+            transition:all 1s ease;
+
+        }
+
+        .main div{
+            padding:5px;
+            width: 90vw;
+            margin:auto;
+            background:rgba(160,255,160);
+           
+            border:solid 2px var(--background_clr);
+            box-shadow:0 2px 4px 2px #0004;
+            border-radius:5px;
+            line-height:1.5rem;
+
+        }
+
+    
+        
+        .animated.appear{
+            opacity: 1;
+            padding:5px;
+            width: 90vw;
+            margin:.auto;
+            background:rgba(160,255,160);
+            border:solid 2px var(--background_clr);
+            box-shadow:0 2px 4px 2px #0004;
+            border-radius:5px;
+            line-height:1.5rem;
+
+        }
+
+        .main .welcome{
+            margin-top:10px;
+            height:;
+            background-image:url("youth/images/youths.svg");
+            background-size:cover;
+            background-position:center;
+            display: flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:start;
+            height:300px;
+            color:black;
+            font-family:arial ,sans-serif;
+            font-size:2rem;
+            text-align:center;
+        }
+        .main .welcome h3{
+            font-size:2rem;
+            color:blue;
+        }
+
+        nav{
         
             background:#f9f9f9;
             padding:0 2rem;
@@ -36,6 +121,7 @@
             border:solid blue 2px;
             width: 100%;
             height:50px;
+            box-shadow:-2px -2px 4px 2px #0009;
         }
 
         nav ul{
@@ -56,7 +142,8 @@
             height:50;
         }
 
-        nav ul li:hover{
+        nav ul li a:hover,.drop__down:hover,
+        .drop__down__item:hover .drop__down{
             background:#bbb;
 
         }
@@ -69,9 +156,6 @@
         .logo span{
            padding-left:10px; 
         }
-
-        
-
         .logo__img{
             border-radius:50%;
             height:30px;
@@ -90,16 +174,45 @@
             text-decoration:none;
             color:black;
         }
-
-
-
-         .top_drop_down{
-            height:20px;
-            display: inline;
-            float:right;
-
+        
+        .drop__down{
+            position: relative;
+            --state:none;
             
         }
+
+        .drop__down:hover{
+            --state:flex;
+        }
+
+        .drop__down__list{
+            position:absolute;
+            display:var(--state);
+            flex-direction:column;
+            row-gap:5px;
+            background: #fff;
+            top:30px;
+            left:0;
+            box-shadow:2px 2px 4px 29x #000;
+            height:inherit;
+            width:max-content;
+        }
+
+        .drop__down__item{
+            display: block;
+         
+            text-align:center;
+            
+        }
+        .drop__down__link{
+            display: block;
+            margin:2 auto;
+            padding:10px;
+            
+            text-align:center;
+
+        }
+
 
         .sidebar{
             display:none;
@@ -115,99 +228,40 @@
             z-index: 999;
         }
         .sidebar ul{
-            display: flex;
+            display: block;
             flex-direction:column;
-            width:100%
+            width:100%;
+            height:inherit;
         }
         .sidebar ul li{
+            display:block;
             width:100%;
             margin:10px;
+           
         }
         .sidebar ul li a{
             padding:10;
-            width:100%;
-        }
-      
-        .main{
-            padding-top:5px;          
-            /* position:fixed; */
-            /* top: 3px; */
-            z-index: -1;
-            /* overflow-y:scroll; */
+            width:100%
         }
 
-        .animated{
-            opacity:0;
-            padding:5px;
-            width: 90vw;
-            margin:auto;
-            background:rgba(160,255,160);
-            border:solid 2px var(--background_clr);
-            box-shadow:0 2px 4px 2px #0004;
-            border-radius:5px;
-            line-height:1.5rem;
-            transition:all 1s ease;
-
+        .side__drop__down{
+            position: relative;
+            display: flex;
+            --side__state:none;
+           
+        }
+        .side__drop__down:hover{
+            --side__state:block;
         }
 
-        .main div{
-            padding:5px;
-            width: 90vw;
-            margin:auto;
-            background:rgba(160,255,160);
-            border:solid 2px var(--background_clr);
-            box-shadow:0 2px 4px 2px #0004;
-            border-radius:5px;
-            line-height:1.5rem;
-
+        .side__drop__down ul{
+            display: var(--side__state);
+            right:-10;
+            color:red;
         }
 
         
-.animated.appear{
-            opacity: 1;
-            padding:5px;
-            width: 90vw;
-            margin:.auto;
-            background:rgba(160,255,160);
-            border:solid 2px var(--background_clr);
-            box-shadow:0 2px 4px 2px #0004;
-            border-radius:5px;
-            line-height:1.5rem;
-
-        }
-
-
-
-
-        h3{
-            text-align:center;
-            padding:5px;
-            color:blue:
-        }
-
-          .main .welcome{
-            margin-top:10px;
-            height:;
-            background-image:url("youths.svg");
-            background-size:cover;
-            background-position:center;
-            display: flex;
-            flex-direction:column;
-            align-items:center;
-            justify-content:start;
-            height:300px;
-            color:black;
-            font-family:arial ,sans-serif;
-            font-size:2rem;
-            text-align:center;
-        }
-        .main .welcome h3{
-            font-size:2rem;
-            color:blue;
-        }
-
-
-    
+          
         #footer{
             
             position: sticky;
@@ -216,11 +270,7 @@
             text-align:center;
             z-index: 1000;
         }
-       
-        hr{
-            height:2px;
-          background-color:green;
-        }
+      
 
         @keyframes move_left {
             0%{
@@ -257,6 +307,10 @@
                 display:none;
             }
         }
+
+       
+
+
     </style>
 
 
@@ -268,12 +322,31 @@
        
           
         <ul class="options">
-                <li class="logo"><a href="#"><img class="logo__img"src="youths.jpeg" alt="logo"><span>S.Y.M</span></a></li> 
-            
-                <li class="hide__on__mobile"><a href="http://sautiyamlimaniyouth.great-site.net/church/youth/">Login</a></li>
+                <li class="logo"><a href="#"><img class="logo__img"src="youth/images/youths.jpeg" alt="logo"><span>S.Y.M</span></a></li>   
+
+                <li class="hide__on__mobile"><a href="youth/">About Us</a></li>
+
+                <li class=" drop__down hide__on__mobile"><a href="#">Login &#x25BE;
+                </a>
+                    <ul class="drop__down__list">
+                        <li class="drop__down__item">
+                            <a href="#" class="drop__down__link">General</a>
+                        </li>
+                        <li class="drop__down__item">
+                            <a href="youth/" class="drop__down__link">Youth
+                                
+                            </a>
+                        </li>
+                        
+                        <li class="drop__down__item">
+                            <a href="#" class="drop__down__link">S-School
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
                 
-                <li class="hide__on__mobile"><a href="#About Us">About Us</a></li>
-            
+                </li>
             
                 <li class="hide__on__mobile"> <a href="#services">Services</a></li>
                 
@@ -286,7 +359,8 @@
                 <li class="hide__on__mobile"><a href="#Give">Give</a></li>
                 
                 <li class="hide__on__mobile"><a href="history.html">History</a></li>
-                <li class="menu__img" onclick=showSideBar()> <img src="menu.png" alt="" id='menu__img' > </li> 
+
+                <li class="menu__img" onclick=showSideBar()> <img src="youth/images/menu.png" alt="" id='menu__img' > </li> 
                
 
                
@@ -298,21 +372,44 @@
           
             <ul class="options">  
                 
-            <li  onclick=hideSideBar() class="menu__img"> <img src="close.png" alt="" id='menu__img'> </li>         
-                <li class="show__on__mobile"><a href="http://sautiyamlimaniyouth.great-site.net/church/youth/">Login</a></li>
-            
+            <li  onclick=hideSideBar() class="menu__img"> <img src="youth/images/close.png" alt="" id='menu__img'> </li>  
+            <hr>
+
                 <li class="show__on__mobile"><a href="#About Us">About Us</a></li>
+            <hr>
+
+                <li class="side__drop__down show__on__mobile"><a href="#">Login</a>
+                    <ul class="side__drop__down__list">
+                            <li class="side__drop__down__item">
+                                <a href="#" class="side__drop__down__link">General</a>
+                            </li>
+                            <li class="side__drop__down__item">
+                                <a href="youth/" class="side__drop__down__link">Youth
+                                    
+                                </a>
+                            </li>
+                            
+                            <li class="side__drop__down__item">
+                                <a href="#" class="side__drop__down__link">S-School
+                                    
+                                </a>
+                            </li>
+                            
+                    </ul>
+            
+                </li>
+                <hr>
             
                 <li class="show__on__mobile"> <a href="#services">Services</a></li>
-                
+                <hr>
                 <li class="show__on__mobile"><a href="#Events">Events</a></li>
-                
+                <hr>
                 <li class="show__on__mobile"><a href="#contact">Contacts</a></li>
-                
+                <hr>
                 <li class="showe__on__mobile"><a href="#projects">Projects</a></li>
-                 
+                 <hr>
                 <li class="show__on__mobile"><a href="#Give">Give</a></li>
-                
+                <hr>
                 <li class="show__on__mobile"><a href="history.html">History</a></li>
                
 
@@ -322,7 +419,7 @@
 
     <div class="main">
 
-        <div class="welcome" class="not_animated">
+        <div class="welcome" >
             <h3>
                 Welcome  
             </h3>
